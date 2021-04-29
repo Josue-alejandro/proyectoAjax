@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" href="js/bootstrap.min.js"></script>
+	<title>Organizador AJAX</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">Administrador de datos</a>
+
+		<ul class="navbar-nav ml-auto"></ul>
+		<form class="form-inline my-2-lg-0">
+			<input type="search" id="search" class="form-control mr-sm-2" placeholder="Busca..." style="background-color: #ffff; border-radius: 3px;">
+			<button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+		</form>
+	</nav>
+
+	<div class="container p-4">
+		<div class="row">
+		<div class="col-md-5">
+			<div class="card">
+			<div class="card-body">
+				<form id="task-form">
+					<div class="form-group">
+						<input type="hidden" id="taskId">
+						<input type="text" id="titulo" placeholder="Titulo" class="form-control">
+					</div>
+					<div class="form-group">
+						<textarea id="descripcion" cols="30" rows="10" class="form-control" placeholder="Descripcion"></textarea>
+					</div>
+
+					<button class="btn btn-primary btn-block text-center">Guardar</button>
+				</form>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-7">
+			<div class="card my-4" id="task-result">
+				<div class="card-body">
+					<ul id="container"></ul>
+				</div>
+			</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Nombre</td>
+					<td>Descripción</td>
+					<td>Fecha</td>
+				</tr>
+			</thead>
+			<tbody id="tareas"></tbody>
+		</table>
+	</div>
+</div>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
